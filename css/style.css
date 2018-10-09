@@ -1,20 +1,6 @@
-/** COLOR PALETTE:
-  *
-  * Background: #F5F5F5 (GREY 100)
-  * Primary Text: black
-  *
-  * Primary color: #3F51B5 (INDIGO)
-  * Primary color_text : white
-  * Accent color: #CDDC39 (LIME)
-  * Accent color_text: black
-  */
-
-/* GLOBAL */
-
+/*Global*/
 * {
-    font-family: Roboto, 'Arial', sans-serif; /* #4 use #roboto #font*/
-
-    /* Reset margins and paddings #heartbeat #spacing */
+    font-family: Roboto, 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -26,8 +12,6 @@ body {
 button, strong {
     text-transform: uppercase;
 }
-
-/* LAYOUT #5 #split */
 
 #channels {
     /* #5 #split #left align the channels */
@@ -55,8 +39,7 @@ button, strong {
     overflow-y: auto;
 }
 
-/* APP BAR */
-
+/*App bar*/
 h1 {
     background-color: #3F51B5;
     color: white;
@@ -95,10 +78,9 @@ h1 #channel-star {
     /* #6 #liking #filled  */
     position:absolute;
     right: 16px;
+    font-size: 24px;
 }
-
-/* CHANNELS LIST */
-
+/*Channels list*/
 ul {
     list-style-type: none;
     background-color: white;
@@ -138,8 +120,11 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
-/* TAB BAR */
-
+/* font awesom size 24px */
+li span {
+    font-size:24px;
+}
+/*Tab bar*/
 /* #5 #smileys #lazy: we can reuse most of the tab-bar's styles for the chat-bar */
 #tab-bar, #chat-bar {
     background-color: white;
@@ -185,6 +170,21 @@ li.selected {
     flex-grow: 0;
 }
 
+#send-input {
+
+    flex-grow: 1;
+}
+#send-button {
+    /* #5 #channels right-align channel-meta #icons absolute = relative to li */
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+
+#chat-bar i {
+    font-size: 24px;
+}
+
 #emojis {
     /* #5 #smileys #emojis menu */
     /* colors and borders */
@@ -210,9 +210,7 @@ li.selected {
     /* #6 #hide the #smile menu */
     display: none;
 }
-
-/* MESSAGES */
-
+/*Messages*/
 .message {
     width: 80%;
     margin-bottom: 8px;
